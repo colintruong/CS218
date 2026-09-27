@@ -1,16 +1,32 @@
+// Windows
+// {
+//     "configurations": [
+//         {
+//             "name": "gdb (Launch)",
+//             "type": "cppvsdbg",
+//             "request": "launch",
+//             "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+//             "args": [],
+//             "stopAtEntry": false,
+//             "cwd": "${fileDirname}",
+//             "environment": [],
+//             "console": "externalTerminal"
+//         }
+//     ],
+//     "version": "2.0.0"
+// }
+
+// Mac
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "gdb (Launch)",
-            "type": "cppvsdbg",
+            "name": "Debug C++",
+            "type": "lldb",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
+            "stopOnEntry": false
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
