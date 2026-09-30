@@ -1,3 +1,15 @@
+/*
+Explanation: It would likely take way too long to calculate the entire string of ABC's and then return the substring from there. Instead, we will
+create a new string and add each individual character from positions l to r. We can actually determine what the letter is supposed to be using just
+the position and the k level. We're going to use recursion. As we know, the string S_k comprises of A then S_k-1 then B then S_k-1 then C. Since we are
+dealing with multiple test cases at once, I wanted to just calculate the length of all possible S_k strings, which would then be accessible in O(1) time.
+To find the character that we want to append to our answer substring, we're going to use recursion. We'll check whether the position fits into which spot: either
+at a guaranteed A, somewhere between A and B, at a guaranteed B, somewhere between B and C, or at a guaranteed C. Eventually, we'll end up recursing to k = 1,
+which is a base case and we'll directly return the letter based on the position. Time complexity is O((r - l + 1) * k). r - l + 1 comes from the substring function, which
+runs for every character we want to get. The k comes from the recursive findChar function where we have a maximum depth of k.
+
+*/
+
 #include <iostream>
 #include <string>
 
