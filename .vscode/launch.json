@@ -1,19 +1,21 @@
 // Windows
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "gdb (Launch)",
-            "type": "cppvsdbg",
+            "name": "C/C++: g++.exe build and debug active file",
+            "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "console": "externalTerminal"
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
 
 // Mac
